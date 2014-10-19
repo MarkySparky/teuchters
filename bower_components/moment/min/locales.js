@@ -2589,7 +2589,7 @@
 
 // moment.js locale configuration
 // locale : french (fr)
-// author : John Fischer : https://github.com/jfroffice
+// author : Mark Fischer : https://github.com/jfroffice
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {

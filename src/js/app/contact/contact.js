@@ -7,11 +7,15 @@ app.controller('ContactCtrl', ['$scope', '$http', '$filter', function($scope, $h
 
   $scope.filter = '';
   $scope.groups = [
-    {name: 'Coworkers'}, 
-    {name: 'Family'}, 
-    {name: 'Friends'}, 
-    {name: 'Partners'}, 
-    {name: 'Group'}
+    {name: 'Guides'}, 
+    {name: 'Articles'}, 
+    {name: 'Signposts'}, 
+    {name: 'Smart Answers'}, 
+    {name: 'Categories'},
+    {name: 'Published'},
+    {name: 'Authoring'},
+    {name: 'Fact checking'},
+    {name: 'Work In Progress'}
   ];
 
   $scope.createGroup = function(){

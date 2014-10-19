@@ -63,7 +63,7 @@ angular.module('ui.event',[]).directive('uiEvent', ['$parse',
  *  object: all attributes will be iterated through, with :key being replaced with its corresponding value
  * @return string
  *
- * @example: 'Hello :name, how are you :day'.format({ name:'John', day:'Today' })
+ * @example: 'Hello :name, how are you :day'.format({ name:'Mark', day:'Today' })
  * @example: 'Records $0 to $1 out of $2 total'.format(['10', '20', '3000'])
  * @example: '$0 agrees to all mentions $0 makes in the event that $0 hits a tree while $0 is driving drunk'.format('Bob')
  */

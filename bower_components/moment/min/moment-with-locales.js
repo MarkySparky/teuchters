@@ -5195,7 +5195,7 @@
 }));
 // moment.js locale configuration
 // locale : french (fr)
-// author : John Fischer : https://github.com/jfroffice
+// author : Mark Fischer : https://github.com/jfroffice
 
 (function (factory) {
     factory(moment);

@@ -21,7 +21,7 @@
     "EMAIL" : "Email",
     "WIDGETS" : "Widgets",
     "components" : {
-      "COMPONENTS" : "Components",
+      "COMPONENTS" : "Administration",
       "ui_kits" : {
         "UI_KITS" : "UI Kits",
         "BUTTONS" : "Buttons",

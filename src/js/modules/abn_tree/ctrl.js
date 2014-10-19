@@ -50,7 +50,7 @@ app.controller('AbnTestController', function($scope, $timeout) {
             label: 'Apples',
             children: [
               {
-                label: 'Granny Smith',
+                label: 'Granny Caulfield',
                 onSelect: apple_selected
               }, {
                 label: 'Red Delicous',

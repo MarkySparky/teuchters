@@ -1206,7 +1206,7 @@ function $UrlMatcherFactory() {
    * array, using the array index as the URL-encoded value:
    *
    * <pre>
-   * var list = ['John', 'Paul', 'George', 'Ringo'];
+   * var list = ['Mark', 'Paul', 'George', 'Ringo'];
    *
    * $urlMatcherFactoryProvider.type('listItem', {
    *   encode: function(item) {

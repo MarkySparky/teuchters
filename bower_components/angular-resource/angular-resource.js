@@ -233,28 +233,28 @@ function shallowClearAndCopy(src, dst) {
      // We can retrieve a collection from the server
      var cards = CreditCard.query(function() {
        // GET: /user/123/card
-       // server returns: [ {id:456, number:'1234', name:'Smith'} ];
+       // server returns: [ {id:456, number:'1234', name:'Caulfield'} ];
 
        var card = cards[0];
        // each item is an instance of CreditCard
        expect(card instanceof CreditCard).toEqual(true);
-       card.name = "J. Smith";
+       card.name = "P. Caulfield";
        // non GET methods are mapped onto the instances
        card.$save();
-       // POST: /user/123/card/456 {id:456, number:'1234', name:'J. Smith'}
-       // server returns: {id:456, number:'1234', name: 'J. Smith'};
+       // POST: /user/123/card/456 {id:456, number:'1234', name:'P. Caulfield'}
+       // server returns: {id:456, number:'1234', name: 'P. Caulfield'};
 
        // our custom method is mapped as well.
        card.$charge({amount:9.99});
-       // POST: /user/123/card/456?amount=9.99&charge=true {id:456, number:'1234', name:'J. Smith'}
+       // POST: /user/123/card/456?amount=9.99&charge=true {id:456, number:'1234', name:'P. Caulfield'}
      });
 
      // we can create an instance as well
      var newCard = new CreditCard({number:'0123'});
-     newCard.name = "Mike Smith";
+     newCard.name = "Peter Caulfield";
      newCard.$save();
-     // POST: /user/123/card {number:'0123', name:'Mike Smith'}
-     // server returns: {id:789, number:'0123', name: 'Mike Smith'};
+     // POST: /user/123/card {number:'0123', name:'Peter Caulfield'}
+     // server returns: {id:789, number:'0123', name: 'Peter Caulfield'};
      expect(newCard.id).toEqual(789);
  * ```
  *

@@ -1,18 +1,18 @@
 {
   "notes":[
     {
-      "content": "AngularJS - HTML enhanced for web apps!",
-      "color": "warning",
+      "content": "UX design meeting",
+      "color": "success",
       "date": 1410788931159
     },
     {
-      "content": "Meeting",
+      "content": "User A/B testing of new Home page",
       "color": "primary",
       "date": 1410788631159
     },
     {
-      "content": "Keep watching",
-      "color": "success",
+      "content": "Signpost template needs rework",
+      "color": "warning",
       "date": 1410788731159
     }
   ]

@@ -10,7 +10,7 @@
  * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
  *
  * Author: Jiri Kavulak
- * Related to project of John Papa and Hans Fjällemark
+ * Related to project of Mark Papa and Hans Fjällemark
  */
 
 angular.module('toaster', ['ngAnimate'])

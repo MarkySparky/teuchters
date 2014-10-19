@@ -47,7 +47,7 @@ if (supportsAccessors) {
 // http://es5.github.com/#x15.2.3.2
 if (!Object.getPrototypeOf) {
     // https://github.com/es-shims/es5-shim/issues#issue/2
-    // http://ejohn.org/blog/objectgetprototypeof/
+    // http://eMark.org/blog/objectgetprototypeof/
     // recommended by fschaefer on github
     //
     // sure, and webreflection says ^_^

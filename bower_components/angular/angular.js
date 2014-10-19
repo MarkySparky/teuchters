@@ -14692,7 +14692,7 @@ function $FilterProvider($provide) {
  * @example
    <example>
      <file name="index.html">
-       <div ng-init="friends = [{name:'John', phone:'555-1276'},
+       <div ng-init="friends = [{name:'Mark', phone:'555-1276'},
                                 {name:'Mary', phone:'800-BIG-MARY'},
                                 {name:'Mike', phone:'555-4321'},
                                 {name:'Adam', phone:'555-5678'},
@@ -14737,7 +14737,7 @@ function $FilterProvider($provide) {
 
          searchText.clear();
          searchText.sendKeys('76');
-         expectFriendNames(['John', 'Julie'], 'friend');
+         expectFriendNames(['Mark', 'Julie'], 'friend');
        });
 
        it('should search in specific fields when filtering with a predicate object', function() {
@@ -15508,7 +15508,7 @@ function limitToFilter(){
          angular.module('orderByExample', [])
            .controller('ExampleController', ['$scope', function($scope) {
              $scope.friends =
-                 [{name:'John', phone:'555-1212', age:10},
+                 [{name:'Mark', phone:'555-1212', age:10},
                   {name:'Mary', phone:'555-9876', age:19},
                   {name:'Mike', phone:'555-4321', age:21},
                   {name:'Adam', phone:'555-5678', age:35},
@@ -15568,7 +15568,7 @@ function limitToFilter(){
         .controller('ExampleController', ['$scope', '$filter', function($scope, $filter) {
           var orderBy = $filter('orderBy');
           $scope.friends = [
-            { name: 'John',    phone: '555-1212',    age: 10 },
+            { name: 'Mark',    phone: '555-1212',    age: 10 },
             { name: 'Mary',    phone: '555-9876',    age: 19 },
             { name: 'Mike',    phone: '555-4321',    age: 21 },
             { name: 'Adam',    phone: '555-5678',    age: 35 },
@@ -18653,7 +18653,7 @@ var ngClassDirective = classDirective('', true);
  * @example
    <example>
      <file name="index.html">
-        <ol ng-init="names=['John', 'Mary', 'Cate', 'Suz']">
+        <ol ng-init="names=['Mark', 'Mary', 'Cate', 'Suz']">
           <li ng-repeat="name in names">
            <span ng-class-odd="'odd'" ng-class-even="'even'">
              {{name}}
@@ -18701,7 +18701,7 @@ var ngClassOddDirective = classDirective('Odd', 0);
  * @example
    <example>
      <file name="index.html">
-        <ol ng-init="names=['John', 'Mary', 'Cate', 'Suz']">
+        <ol ng-init="names=['Mark', 'Mary', 'Cate', 'Suz']">
           <li ng-repeat="name in names">
            <span ng-class-odd="'odd'" ng-class-even="'even'">
              {{name}} &nbsp; &nbsp; &nbsp;
@@ -18872,10 +18872,10 @@ var ngCloakDirective = ngDirective({
  *      .controller('SettingsController1', SettingsController1);
  *
  *    function SettingsController1() {
- *      this.name = "John Smith";
+ *      this.name = "Mark Caulfield";
  *      this.contacts = [
  *        {type: 'phone', value: '408 555 1212'},
- *        {type: 'email', value: 'john.smith@example.org'} ];
+ *        {type: 'email', value: 'Mark.Caulfield@example.org'} ];
  *    }
  *
  *    SettingsController1.prototype.greet = function() {
@@ -18900,7 +18900,7 @@ var ngCloakDirective = ngDirective({
  *     it('should check controller as', function() {
  *       var container = element(by.id('ctrl-as-exmpl'));
  *         expect(container.element(by.model('settings.name'))
- *           .getAttribute('value')).toBe('John Smith');
+ *           .getAttribute('value')).toBe('Mark Caulfield');
  *
  *       var firstRepeat =
  *           container.element(by.repeater('contact in settings.contacts').row(0));
@@ -18911,7 +18911,7 @@ var ngCloakDirective = ngDirective({
  *           .toBe('408 555 1212');
  *
  *       expect(secondRepeat.element(by.model('contact.value')).getAttribute('value'))
- *           .toBe('john.smith@example.org');
+ *           .toBe('Mark.Caulfield@example.org');
  *
  *       firstRepeat.element(by.linkText('clear')).click();
  *
@@ -18955,10 +18955,10 @@ var ngCloakDirective = ngDirective({
  *     .controller('SettingsController2', ['$scope', SettingsController2]);
  *
  *   function SettingsController2($scope) {
- *     $scope.name = "John Smith";
+ *     $scope.name = "Mark Caulfield";
  *     $scope.contacts = [
  *       {type:'phone', value:'408 555 1212'},
- *       {type:'email', value:'john.smith@example.org'} ];
+ *       {type:'email', value:'Mark.Caulfield@example.org'} ];
  *
  *     $scope.greet = function() {
  *       alert($scope.name);
@@ -18984,7 +18984,7 @@ var ngCloakDirective = ngDirective({
  *      var container = element(by.id('ctrl-exmpl'));
  *
  *      expect(container.element(by.model('name'))
- *          .getAttribute('value')).toBe('John Smith');
+ *          .getAttribute('value')).toBe('Mark Caulfield');
  *
  *      var firstRepeat =
  *          container.element(by.repeater('contact in contacts').row(0));
@@ -18994,7 +18994,7 @@ var ngCloakDirective = ngDirective({
  *      expect(firstRepeat.element(by.model('contact.value')).getAttribute('value'))
  *          .toBe('408 555 1212');
  *      expect(secondRepeat.element(by.model('contact.value')).getAttribute('value'))
- *          .toBe('john.smith@example.org');
+ *          .toBe('Mark.Caulfield@example.org');
  *
  *      firstRepeat.element(by.linkText('clear')).click();
  *
@@ -20096,7 +20096,7 @@ var ngNonBindableDirective = ngDirective({ terminal: true, priority: 1000 });
  * # Configuring ngPluralize with offset
  * The `offset` attribute allows further customization of pluralized text, which can result in
  * a better user experience. For example, instead of the message "4 people are viewing this document",
- * you might display "John, Kate and 2 others are viewing this document".
+ * you might display "Mark, Kate and 2 others are viewing this document".
  * The offset attribute allows you to offset a number by any desired value.
  * Let's take a look at an example:
  *
@@ -20112,10 +20112,10 @@ var ngNonBindableDirective = ngDirective({ terminal: true, priority: 1000 });
  *
  * Notice that we are still using two plural categories(one, other), but we added
  * three explicit number rules 0, 1 and 2.
- * When one person, perhaps John, views the document, "John is viewing" will be shown.
+ * When one person, perhaps Mark, views the document, "Mark is viewing" will be shown.
  * When three people view the document, no explicit number rule is found, so
  * an offset of 2 is taken off 3, and Angular uses 1 to decide the plural category.
- * In this case, plural category 'one' is matched and "John, Mary and one other person are viewing"
+ * In this case, plural category 'one' is matched and "Mark, Mary and one other person are viewing"
  * is shown.
  *
  * Note that when you specify offsets, you must provide explicit number rules for
@@ -20373,7 +20373,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', function($locale, $interp
   <example module="ngAnimate" deps="angular-animate.js" animations="true">
     <file name="index.html">
       <div ng-init="friends = [
-        {name:'John', age:25, gender:'boy'},
+        {name:'Mark', age:25, gender:'boy'},
         {name:'Jessie', age:30, gender:'girl'},
         {name:'Johanna', age:28, gender:'girl'},
         {name:'Joy', age:15, gender:'girl'},
@@ -20434,7 +20434,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', function($locale, $interp
 
       it('should render initial data set', function() {
         expect(friends.count()).toBe(10);
-        expect(friends.get(0).getText()).toEqual('[1] John who is 25 years old.');
+        expect(friends.get(0).getText()).toEqual('[1] Mark who is 25 years old.');
         expect(friends.get(1).getText()).toEqual('[2] Jessie who is 30 years old.');
         expect(friends.last().getText()).toEqual('[10] Samantha who is 60 years old.');
         expect(element(by.binding('friends.length')).getText())
